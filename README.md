@@ -1,4 +1,4 @@
-# LibraryManager
+# OBeco
 O projeto OBeco, é um projeto de administração de uma biblioteca que visa juntar todas as funções que um administrador de um sistema pode ter. As funções se resumem a fazer reservas, empréstimos, consultar acervo, etc. O banco de dados foi feito em CRUD simples com sqlserver
 
 
