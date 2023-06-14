@@ -104,5 +104,10 @@ namespace OBeco
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

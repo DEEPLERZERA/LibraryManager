@@ -43,60 +43,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Abel", 63.75F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 63.75F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
             this.label1.Location = new System.Drawing.Point(721, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(638, 108);
+            this.label1.Size = new System.Drawing.Size(833, 96);
             this.label1.TabIndex = 0;
             this.label1.Text = "LIVRARIA do BECO.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
             this.label2.Location = new System.Drawing.Point(708, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 48);
+            this.label2.Size = new System.Drawing.Size(102, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Login :";
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Poppins", 14.25F);
+            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.txtLogin.Location = new System.Drawing.Point(708, 321);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(710, 36);
+            this.txtLogin.Size = new System.Drawing.Size(710, 29);
             this.txtLogin.TabIndex = 3;
             this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
             this.label3.Location = new System.Drawing.Point(708, 487);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 48);
+            this.label3.Size = new System.Drawing.Size(114, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "Senha :";
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Poppins", 14.25F);
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.txtSenha.Location = new System.Drawing.Point(708, 556);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(710, 36);
+            this.txtSenha.Size = new System.Drawing.Size(710, 29);
             this.txtSenha.TabIndex = 5;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
-            this.btnLogin.Font = new System.Drawing.Font("Poppins ExtraBold", 24F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(826, 643);
             this.btnLogin.Name = "btnLogin";
@@ -109,7 +109,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Poppins ExtraBold", 24F, System.Drawing.FontStyle.Bold);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
             this.button2.Location = new System.Drawing.Point(826, 727);
             this.button2.Name = "button2";
@@ -122,7 +122,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Poppins ExtraBold", 24F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
             this.button1.Location = new System.Drawing.Point(826, 811);
             this.button1.Name = "button1";
@@ -158,6 +158,7 @@
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

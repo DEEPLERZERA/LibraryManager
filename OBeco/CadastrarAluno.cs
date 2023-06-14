@@ -73,5 +73,10 @@ namespace OBeco
                 login.Show();
             }
         }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
