@@ -68,7 +68,7 @@ namespace OBeco
             }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Funcionario]
                        ([Nome]
                        ,[Senha]

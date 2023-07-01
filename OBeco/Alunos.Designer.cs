@@ -36,16 +36,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dtgAlunos = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new OBeco.BibliotecaDataSet();
-            this.usuariosTableAdapter = new OBeco.BibliotecaDataSetTableAdapters.UsuariosTableAdapter();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usuariosTableAdapter = new OBeco.BibliotecaDataSetTableAdapters.UsuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
@@ -55,11 +54,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins ExtraBold", 36F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Poppins", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
             this.label1.Location = new System.Drawing.Point(12, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 84);
+            this.label1.Size = new System.Drawing.Size(206, 84);
             this.label1.TabIndex = 3;
             this.label1.Text = "Alunos";
             // 
@@ -73,14 +72,6 @@
             this.label2.Size = new System.Drawing.Size(117, 56);
             this.label2.TabIndex = 22;
             this.label2.Text = "Filtros";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Poppins", 14.25F);
-            this.textBox2.Location = new System.Drawing.Point(73, 288);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 36);
-            this.textBox2.TabIndex = 25;
             // 
             // dtgAlunos
             // 
@@ -110,9 +101,9 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgAlunos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtgAlunos.EnableHeadersVisualStyles = false;
-            this.dtgAlunos.Location = new System.Drawing.Point(73, 352);
+            this.dtgAlunos.Location = new System.Drawing.Point(73, 278);
             this.dtgAlunos.Name = "dtgAlunos";
-            this.dtgAlunos.Size = new System.Drawing.Size(1540, 446);
+            this.dtgAlunos.Size = new System.Drawing.Size(1540, 520);
             this.dtgAlunos.TabIndex = 27;
             this.dtgAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgAlunos_CellContentClick);
             // 
@@ -156,10 +147,6 @@
             this.bibliotecaDataSet.DataSetName = "BibliotecaDataSet";
             this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
             // iconButton1
             // 
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
@@ -182,13 +169,16 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // Alunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1684, 881);
             this.Controls.Add(this.dtgAlunos);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -211,7 +201,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dtgAlunos;
         private BibliotecaDataSet bibliotecaDataSet;
         private System.Windows.Forms.BindingSource usuariosBindingSource;

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bibliotecaDataSet1" targetNamespace="http://tempuri.org/bibliotecaDataSet13.xsd" xmlns:mstns="http://tempuri.org/bibliotecaDataSet13.xsd" xmlns="http://tempuri.org/bibliotecaDataSet13.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bibliotecaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bibliotecaConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OBeco.Properties.Settings.GlobalReference.Default.bibliotecaConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LivrosTableAdapter" GeneratorDataComponentClassName="LivrosTableAdapter" Name="Livros" UserDataComponentName="LivrosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bibliotecaConnectionString1 (Settings)" DbObjectName="biblioteca.dbo.Livros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Titulo, Ano_Public FROM dbo.Livros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
+              <Mapping SourceColumn="Ano_Public" DataSetColumn="Ano_Public" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bibliotecaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="bibliotecaDataSet1" msprop:Generator_DataSetName="bibliotecaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Livros" msprop:Generator_RowEvHandlerName="LivrosRowChangeEventHandler" msprop:Generator_RowDeletedName="LivrosRowDeleted" msprop:Generator_RowDeletingName="LivrosRowDeleting" msprop:Generator_RowEvArgName="LivrosRowChangeEvent" msprop:Generator_TablePropName="Livros" msprop:Generator_RowChangedName="LivrosRowChanged" msprop:Generator_RowChangingName="LivrosRowChanging" msprop:Generator_TableClassName="LivrosDataTable" msprop:Generator_RowClassName="LivrosRow" msprop:Generator_TableVarName="tableLivros" msprop:Generator_UserTableName="Livros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Titulo" msprop:Generator_ColumnPropNameInRow="Titulo" msprop:Generator_ColumnPropNameInTable="TituloColumn" msprop:Generator_ColumnVarNameInTable="columnTitulo" msprop:Generator_UserColumnName="Titulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ano_Public" msprop:Generator_ColumnPropNameInRow="Ano_Public" msprop:Generator_ColumnPropNameInTable="Ano_PublicColumn" msprop:Generator_ColumnVarNameInTable="columnAno_Public" msprop:Generator_UserColumnName="Ano_Public" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

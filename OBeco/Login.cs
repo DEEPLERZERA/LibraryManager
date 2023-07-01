@@ -34,7 +34,7 @@ namespace OBeco
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
 
 
                     SqlCommand cmd = new SqlCommand("select * from Usuarios where Nome = @Nome and Senha = @Senha ", con);
@@ -101,11 +101,6 @@ namespace OBeco
         }
 
         private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
         {
 
         }

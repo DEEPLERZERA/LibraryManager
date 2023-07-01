@@ -30,9 +30,8 @@ namespace OBeco
 
         private void Alunos_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.Usuarios'. Você pode movê-la ou removê-la conforme necessário.
-            this.usuariosTableAdapter.Fill(this.bibliotecaDataSet.Usuarios);
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
 
             SqlCommand cmd;
             SqlDataAdapter adpt;

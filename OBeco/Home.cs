@@ -19,7 +19,10 @@ namespace OBeco
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            if (!globals.funcionario)
+            {
+                button1.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,8 +41,8 @@ namespace OBeco
         private void button2_Click(object sender, EventArgs e)
         {
             Acervo acervo = new Acervo();
-            this.Close();
-            acervo.Show();
+            this.Hide();
+            acervo.Show();  
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -51,7 +54,21 @@ namespace OBeco
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Reserva reserva = new Reserva();
+            this.Close();  
+            reserva.Show();
+        }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Emprestimo emprestimo = new Emprestimo();
+            this.Close();
+            emprestimo.Show();
         }
     }
 }

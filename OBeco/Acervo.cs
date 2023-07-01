@@ -26,9 +26,8 @@ namespace OBeco
 
         private void Acervo_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet2.Livros'. Você pode movê-la ou removê-la conforme necessário.
-            this.livrosTableAdapter.Fill(this.bibliotecaDataSet2.Livros);
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
 
             SqlCommand cmd;
             SqlDataAdapter adpt;
@@ -53,7 +52,7 @@ namespace OBeco
            if(e.ColumnIndex == 5)
             {
                 DataGridViewRow row = dtgLivros.Rows[e.RowIndex];
-                SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("Delete from Livros where Titulo=@Titulo", con);
                 cmd.Parameters.AddWithValue("Titulo", row.Cells["tituloDataGridViewTextBoxColumn"].Value);
                 con.Open();
@@ -85,7 +84,7 @@ namespace OBeco
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
 
             SqlCommand cmd;
             SqlDataAdapter adpt;

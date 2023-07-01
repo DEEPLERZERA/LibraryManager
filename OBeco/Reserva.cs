@@ -11,82 +11,26 @@ using System.Windows.Forms;
 
 namespace OBeco
 {
-    public partial class Emprestimo : Form
+    public partial class Reserva : Form
     {
-        public Emprestimo()
+        public Reserva()
         {
             InitializeComponent();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Reserva_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet2.Livros'. Você pode movê-la ou removê-la conforme necessário.
+            this.livrosTableAdapter1.Fill(this.bibliotecaDataSet2.Livros);
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet1.Livros'. Você pode movê-la ou removê-la conforme necessário.
+            this.livrosTableAdapter.Fill(this.bibliotecaDataSet1.Livros);
 
-        }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgLivros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 2)
-            {
-                DataGridViewRow row = dtgDisponiveis.Rows[e.RowIndex];
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand("update Livros set Disponibilidade = 'emprestado' where Titulo=@Titulo", con);
-                cmd.Parameters.AddWithValue("Titulo", row.Cells["tituloDataGridViewTextBoxColumn"].Value);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                SqlDataAdapter adpt;
-                DataTable dt;
-
-                adpt = new SqlDataAdapter(@"SELECT [Titulo]
-      ,[Ano_Public]
-
-  FROM [dbo].[Livros] WHERE Disponibilidade = 'disponivel' 
-", con);
-                dt = new DataTable();
-                adpt.Fill(dt);
-                dtgDisponiveis.DataSource = dt;
-
-                SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
-
-                SqlCommand cmd2;
-                SqlDataAdapter adpt2;
-                DataTable dt2;
-
-                adpt2 = new SqlDataAdapter(@"SELECT [Titulo]
-      ,[Ano_Public]
-
-  FROM [dbo].[Livros] WHERE Disponibilidade = 'emprestado' 
-", con);
-                dt2 = new DataTable();
-                adpt2.Fill(dt2);
-                dtgDevolver.DataSource = dt2;
-            }
-
-        }
-
-        private void Emprestimo_Load(object sender, EventArgs e)
-        {
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
 
@@ -115,12 +59,11 @@ namespace OBeco
             adpt2 = new SqlDataAdapter(@"SELECT [Titulo]
       ,[Ano_Public]
 
-  FROM [dbo].[Livros] WHERE Disponibilidade = 'emprestado' 
+  FROM [dbo].[Livros] WHERE Disponibilidade = 'reservado' 
 ", con);
             dt2 = new DataTable();
             adpt2.Fill(dt2);
-            dtgDevolver.DataSource = dt2;
-
+            dtgReservas.DataSource = dt2;
 
         }
 
@@ -131,11 +74,52 @@ namespace OBeco
             home.Show();
         }
 
-        private void dtgDevolver_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgDisponiveis_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {
-                DataGridViewRow row = dtgDevolver.Rows[e.RowIndex];
+                DataGridViewRow row = dtgDisponiveis.Rows[e.RowIndex];
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("update Livros set Disponibilidade = 'reservado' where Titulo=@Titulo", con);
+                cmd.Parameters.AddWithValue("Titulo", row.Cells["tituloDataGridViewTextBoxColumn"].Value);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                SqlDataAdapter adpt;
+                DataTable dt;
+
+                adpt = new SqlDataAdapter(@"SELECT [Titulo]
+      ,[Ano_Public]
+
+  FROM [dbo].[Livros] WHERE Disponibilidade = 'disponivel' 
+", con);
+                dt = new DataTable();
+                adpt.Fill(dt);
+                dtgDisponiveis.DataSource = dt;
+
+                SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
+
+                SqlCommand cmd2;
+                SqlDataAdapter adpt2;
+                DataTable dt2;
+
+                adpt2 = new SqlDataAdapter(@"SELECT [Titulo]
+      ,[Ano_Public]
+
+  FROM [dbo].[Livros] WHERE Disponibilidade = 'reservado' 
+", con);
+                dt2 = new DataTable();
+                adpt2.Fill(dt2);
+                dtgReservas.DataSource = dt2;
+            }
+        }
+
+        private void dtgReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                DataGridViewRow row = dtgReservas.Rows[e.RowIndex];
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand("update Livros set Disponibilidade = 'disponivel' where Titulo=@Titulo", con);
                 cmd.Parameters.AddWithValue("Titulo", row.Cells["titulo2dataGridViewTextBoxColumn2"].Value);
@@ -164,11 +148,11 @@ namespace OBeco
                 adpt2 = new SqlDataAdapter(@"SELECT [Titulo]
       ,[Ano_Public]
 
-  FROM [dbo].[Livros] WHERE Disponibilidade = 'emprestado' 
+  FROM [dbo].[Livros] WHERE Disponibilidade = 'reservado' 
 ", con);
                 dt2 = new DataTable();
                 adpt2.Fill(dt2);
-                dtgDevolver.DataSource = dt2;
+                dtgReservas.DataSource = dt2;
             }
         }
     }

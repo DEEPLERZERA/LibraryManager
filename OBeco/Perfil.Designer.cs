@@ -54,11 +54,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins ExtraBold", 36F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Poppins", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
-            this.label1.Location = new System.Drawing.Point(142, 105);
+            this.label1.Location = new System.Drawing.Point(137, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 84);
+            this.label1.Size = new System.Drawing.Size(352, 84);
             this.label1.TabIndex = 4;
             this.label1.Text = "Minha Conta";
             // 

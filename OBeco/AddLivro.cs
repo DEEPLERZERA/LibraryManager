@@ -60,15 +60,17 @@ namespace OBeco
             else
             {   
                 int AnoConvertido = int.Parse(txtAno.Text);
-                SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Biblioteca;Integrated Security=True");
+                string disponivel = "disponivel";
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\Bookstore;Initial Catalog=biblioteca;Integrated Security=True");
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Livros]
                    ([Autor]
                    ,[Titulo]
                    ,[Editora]
                    ,[Ano_Public]
-                   ,[Categoria])
+                   ,[Categoria]
+                   ,[Disponibilidade])
                  VALUES
-                       ('" + txtAutor.Text + "','" + txtTitulo.Text + "','" + txtEditora.Text + "','" + AnoConvertido + "','" + txtCategoria.Text + "') ", con);
+                       ('" + txtAutor.Text + "','" + txtTitulo.Text + "','" + txtEditora.Text + "','" + AnoConvertido + "','" + txtCategoria.Text + "','" + disponivel + "') ", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

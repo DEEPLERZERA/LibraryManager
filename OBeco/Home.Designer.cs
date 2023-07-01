@@ -91,26 +91,27 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Empréstimo";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Abel", 63.75F);
+            this.label1.Font = new System.Drawing.Font("Poppins Light", 63.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
-            this.label1.Location = new System.Drawing.Point(555, 9);
+            this.label1.Location = new System.Drawing.Point(478, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(638, 108);
+            this.label1.Size = new System.Drawing.Size(803, 149);
             this.label1.TabIndex = 8;
             this.label1.Text = "LIVRARIA do BECO.";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Poppins", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
-            this.label3.Location = new System.Drawing.Point(55, 186);
+            this.label3.Location = new System.Drawing.Point(55, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 48);
+            this.label3.Size = new System.Drawing.Size(275, 48);
             this.label3.TabIndex = 10;
             this.label3.Text = "Seja bem vindo ao";
             // 
@@ -157,13 +158,14 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins ExtraBold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Poppins", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(153)))), ((int)(((byte)(175)))));
-            this.label4.Location = new System.Drawing.Point(363, 186);
+            this.label4.Location = new System.Drawing.Point(366, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 48);
             this.label4.TabIndex = 12;
             this.label4.Text = "eco.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // iconButton2
             // 

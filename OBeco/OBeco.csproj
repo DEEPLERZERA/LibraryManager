@@ -76,15 +76,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotecaDataSet12.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bibliotecaDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliotecaDataSet13.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BibliotecaDataSet21.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotecaDataSet21.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bibliotecaDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliotecaDataSet22.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BibliotecaDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotecaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bibliotecaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliotecaDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="CadastrarAluno.cs">
       <SubType>Form</SubType>
@@ -97,6 +112,18 @@
     </Compile>
     <Compile Include="CadastrarFunc.Designer.cs">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disponivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disponivel.Designer.cs">
+      <DependentUpon>Disponivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimar.Designer.cs">
+      <DependentUpon>Emprestimar.cs</DependentUpon>
     </Compile>
     <Compile Include="Emprestimo.cs">
       <SubType>Form</SubType>
@@ -125,6 +152,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserva.Designer.cs">
+      <DependentUpon>Reserva.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Acervo.resx">
       <DependentUpon>Acervo.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarFunc.resx">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disponivel.resx">
+      <DependentUpon>Disponivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimar.resx">
+      <DependentUpon>Emprestimar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Emprestimo.resx">
       <DependentUpon>Emprestimo.cs</DependentUpon>
@@ -162,6 +201,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reserva.resx">
+      <DependentUpon>Reserva.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BibliotecaDataSet12.xsc">
       <DependentUpon>BibliotecaDataSet12.xsd</DependentUpon>
     </None>
@@ -172,6 +214,17 @@
     </None>
     <None Include="BibliotecaDataSet12.xss">
       <DependentUpon>BibliotecaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="bibliotecaDataSet13.xsc">
+      <DependentUpon>bibliotecaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="bibliotecaDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bibliotecaDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bibliotecaDataSet13.xss">
+      <DependentUpon>bibliotecaDataSet13.xsd</DependentUpon>
     </None>
     <None Include="BibliotecaDataSet21.xsc">
       <DependentUpon>BibliotecaDataSet21.xsd</DependentUpon>
@@ -184,6 +237,17 @@
     <None Include="BibliotecaDataSet21.xss">
       <DependentUpon>BibliotecaDataSet21.xsd</DependentUpon>
     </None>
+    <None Include="bibliotecaDataSet22.xsc">
+      <DependentUpon>bibliotecaDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="bibliotecaDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bibliotecaDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bibliotecaDataSet22.xss">
+      <DependentUpon>bibliotecaDataSet22.xsd</DependentUpon>
+    </None>
     <None Include="BibliotecaDataSet3.xsc">
       <DependentUpon>BibliotecaDataSet3.xsd</DependentUpon>
     </None>
@@ -194,6 +258,17 @@
     </None>
     <None Include="BibliotecaDataSet3.xss">
       <DependentUpon>BibliotecaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bibliotecaDataSet4.xsc">
+      <DependentUpon>bibliotecaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bibliotecaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bibliotecaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bibliotecaDataSet4.xss">
+      <DependentUpon>bibliotecaDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
